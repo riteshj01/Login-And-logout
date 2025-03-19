@@ -1,5 +1,23 @@
 <!doctype html>
+<%@page import="com.intialize.User"%>
+<%@page import="jakarta.servlet.http.HttpServletResponse"%>
+
+
+
+
+
+<% User user1 =(User)session.getAttribute("user-ob");
+if(null == user1){
+
+session.setAttribute("login-msg"," Register first..");
+response.sendRedirect("login.jsp");
+}
+%>
 <html lang="en">
+
+
+
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

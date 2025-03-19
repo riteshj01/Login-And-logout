@@ -23,6 +23,22 @@
        <i class ="fa fa-user-circle-o fa-2x"></i>
        <h5>Login page</h5>
        </div>
+       <!---Login-msg-->
+       <%
+                     String loginMsg =(String)session.getAttribute("login-msg");
+
+                     if(loginMsg!=null){
+                     %>
+                     <div class="alert alert-danger" role="alert"><%=loginMsg %> </div>
+
+                     <%
+                     session.removeAttribute("error-msg");
+
+                     }%>
+
+
+
+       <!----logout-msg-->
        <%
        String msg =(String)session.getAttribute("logout-msg");
        if(msg!=null){
